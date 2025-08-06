@@ -1,0 +1,116 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="User.master.cs" Inherits="WebApplication1.User" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Master Page</title>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+     <style>
+        .navbar {
+            background-color: black;
+        }
+
+        .logo img {
+            height: 60px;
+        }
+
+        .nav-link {
+            color: white !important;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+
+                      <nav class="navbar navbar-expand-md navbar-dark">
+                <div class="container-fluid">
+                  
+                    <div class="logo">
+                        <img src="images/FitnessLogo.png" alt="Fitness Logo" />
+                    </div>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="Home2.aspx">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Trainer.aspx">Trainer</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Gallery.aspx">Gallery</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Member.aspx">Membership</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Contact.aspx">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                <%--content page--%>
+            </asp:ContentPlaceHolder>
+            <hr />
+            <!-- Footer Section -->
+<footer class="footer" style="background-color: #222; color: white; padding: 40px 0;">
+    <div class="container footer-container row">
+        <!-- About Section -->
+        <div class="col-md-4 footer-about">
+            <h3>FITNESS GYM</h3>
+            <p>Your fitness journey starts here. Join our community and transform your life with expert training and support.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-md-4 footer-links">
+            <h4>Quick Links</h4>
+            <ul class="list-unstyled">
+                <li><a href="home.aspx" class="text-light">Home</a></li>
+                <li><a href="Trainer.aspx" class="text-light">Trainers</a></li>
+                <li><a href="Member.aspx" class="text-light">Membership</a></li>
+                <li><a href="Contact.aspx" class="text-light">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="col-md-4 footer-contact">
+            <h4>Contact Us</h4>
+            <b>FITNESS GYM</b>
+            <p>45, Rajarampuri 5th Lane<br />
+            Kolhapur, Maharashtra 416008<br />
+            India</p>
+            <p>Email: info@powerfitgym.com</p>
+            <p>Phone: (123) 456-7890</p>
+            <div class="footer-socials d-flex gap-2 mt-2">
+                <a href="#"><img src="images/fb.png" alt="Facebook" width="30" /></a><br><br><br>
+                <a href="#"><img src="images/insta.jpeg" alt="Instagram" width="30" /></a><br>
+                <a href="#"><img src="images/twiter.png" alt="Twitter" width="30" /></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom text-center mt-4">
+        <p>&copy; 2025 FITNESS GYM. All Rights Reserved.</p>
+    </div>
+</footer>
+
+
+        </div>
+    </form>
+</body>
+</html>
